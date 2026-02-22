@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florida DBA Registration Fee</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+        }
+
+        h1,
+        h2 {
+            color: #1a73e8;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            width: 100%;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #1a73e8;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #155ab6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .ad-slot {
+            margin: 30px 0;
+            padding: 20px;
+            text-align: center;
+            background: #eef2f7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Florida DBA Registration Fee</h1>
+        <p>Estimate the cost to register a DBA (Doing Business As) in Florida. Fees vary by county, usually $50–$75.</p>
+
+        <h2>Estimate Your Fee</h2>
+        <label for="county">County Fee ($):</label>
+        <input type="number" id="county" placeholder="Enter county fee or leave blank for default $60">
+        <button onclick="calculateFee()">Calculate</button>
+        <div id="result" style="margin-top:15px;font-weight:bold;"></div>
+
+        <h2>Typical Fees</h2>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Estimated Cost</th>
+            </tr>
+            <tr>
+                <td>DBA Registration</td>
+                <td>$60</td>
+            </tr>
+            <tr>
+                <td>Optional Publication</td>
+                <td>$5–$15</td>
+            </tr>
+        </table>
+
+        <h2>FAQ</h2>
+        <h3>Is DBA required?</h3>
+        <p>If using a business name different from your legal name, yes.</p>
+        <h3>Is renewal needed?</h3>
+        <p>Florida DBAs do not require periodic renewal, but confirm with county.</p>
+
+        <div class="ad-slot">Advertisement Space</div>
+
+        <script>
+            function calculateFee() {
+                let fee = parseFloat(document.getElementById("county").value);
+                if (isNaN(fee)) fee = 60;
+                document.getElementById("result").innerHTML = "Estimated Total Cost: $" + fee.toFixed(2);
+            }
+        </script>
+    </div>
+</body>
+
+</html>
