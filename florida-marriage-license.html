@@ -7,7 +7,7 @@
     <title>Florida Marriage License Cost</title>
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             background: #f4f6f8;
             margin: 0;
             padding: 0;
@@ -26,11 +26,13 @@
             color: #1a73e8;
         }
 
+        label,
         input,
         button {
+            display: block;
+            margin: 10px 0;
             padding: 10px;
             width: 100%;
-            margin: 10px 0;
             box-sizing: border-box;
         }
 
@@ -64,19 +66,27 @@
             text-align: center;
             background: #eef2f7;
         }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
+
         <h1>Florida Marriage License Cost</h1>
         <p>Estimate marriage license fees in Florida. Fees may vary slightly by county.</p>
 
         <h2>Estimate Your Fee</h2>
+
         <label for="county">County Fee ($):</label>
         <input type="number" id="county" placeholder="Enter county fee or leave blank for default $93">
+
         <button onclick="calculateFee()">Calculate</button>
-        <div id="result" style="margin-top:15px;font-weight:bold;"></div>
+        <div id="result"></div>
 
         <h2>Typical Fees</h2>
         <table>
@@ -98,7 +108,7 @@
         <h3>Do both parties need ID?</h3>
         <p>Yes, valid ID is required for both parties.</p>
         <h3>Is there a waiting period?</h3>
-        <p>Florida does not require a waiting period for residents under 18, otherwise rules vary.</p>
+        <p>Florida does not require a waiting period for residents under 18; otherwise rules vary.</p>
 
         <div class="ad-slot">Advertisement Space</div>
 
@@ -109,6 +119,7 @@
                 document.getElementById("result").innerHTML = "Estimated Total Cost: $" + fee.toFixed(2);
             }
         </script>
+
     </div>
 </body>
 

@@ -7,7 +7,7 @@
     <title>Florida Business License Fee</title>
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             background: #f4f6f8;
             margin: 0;
             padding: 0;
@@ -26,8 +26,25 @@
             color: #1a73e8;
         }
 
-        a {
-            color: #1a73e8;
+        label,
+        select,
+        button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #1a73e8;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #155ab6;
         }
 
         table {
@@ -49,14 +66,40 @@
             text-align: center;
             background: #eef2f7;
         }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
+
         <h1>Florida Business License Fee</h1>
-        <p>Estimate business license fees in Florida. Fees vary by city and type of business. This calculator provides
+        <p>Estimate business license fees in Florida. Fees vary by city and business type. This calculator provides
             general estimates.</p>
+
+        <h2>Estimate Your Fee</h2>
+
+        <label for="city">Select City:</label>
+        <select id="city">
+            <option value="50">Miami</option>
+            <option value="75">Orlando</option>
+            <option value="100">Tampa</option>
+            <option value="150">Jacksonville</option>
+        </select>
+
+        <label for="type">Business Type:</label>
+        <select id="type">
+            <option value="1">Small</option>
+            <option value="1.2">Medium</option>
+            <option value="1.5">Large</option>
+        </select>
+
+        <button onclick="calculateFee()">Calculate</button>
+        <div id="result"></div>
 
         <h2>Typical Fees</h2>
         <table>
@@ -78,9 +121,19 @@
         <h3>Do all businesses need a license?</h3>
         <p>Yes, most businesses operating in Florida require a local business license.</p>
         <h3>Does fee depend on city?</h3>
-        <p>Yes, each city may set its own fees.</p>
+        <p>Yes, each city may set its own fee structure.</p>
 
         <div class="ad-slot">Advertisement Space</div>
+
+        <script>
+            function calculateFee() {
+                let cityFee = parseFloat(document.getElementById("city").value);
+                let typeMultiplier = parseFloat(document.getElementById("type").value);
+                let total = cityFee * typeMultiplier;
+                document.getElementById("result").innerHTML = "Estimated Total Fee: $" + total.toFixed(2);
+            }
+        </script>
+
     </div>
 </body>
 

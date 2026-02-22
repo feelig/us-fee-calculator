@@ -7,7 +7,7 @@
     <title>Florida Vehicle Registration Fee</title>
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             background: #f4f6f8;
             margin: 0;
             padding: 0;
@@ -26,12 +26,13 @@
             color: #1a73e8;
         }
 
-        input,
+        label,
         select,
         button {
+            display: block;
+            margin: 10px 0;
             padding: 10px;
             width: 100%;
-            margin: 10px 0;
             box-sizing: border-box;
         }
 
@@ -65,23 +66,31 @@
             text-align: center;
             background: #eef2f7;
         }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
+
         <h1>Florida Vehicle Registration Fee</h1>
         <p>Estimate vehicle registration fees in Florida. Fees vary by vehicle type and county.</p>
 
         <h2>Estimate Your Fee</h2>
+
         <label for="vehicle">Vehicle Type:</label>
         <select id="vehicle">
             <option value="50">Passenger Car</option>
             <option value="100">Truck</option>
             <option value="200">Commercial Vehicle</option>
         </select>
+
         <button onclick="calculateFee()">Calculate</button>
-        <div id="result" style="margin-top:15px;font-weight:bold;"></div>
+        <div id="result"></div>
 
         <h2>Typical Fees</h2>
         <table>
@@ -117,6 +126,7 @@
                 document.getElementById("result").innerHTML = "Estimated Total Fee: $" + fee.toFixed(2);
             }
         </script>
+
     </div>
 </body>
 

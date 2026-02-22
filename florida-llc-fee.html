@@ -7,7 +7,7 @@
     <title>Florida LLC Filing Fee</title>
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             background: #f4f6f8;
             margin: 0;
             padding: 0;
@@ -24,6 +24,27 @@
         h1,
         h2 {
             color: #1a73e8;
+        }
+
+        label,
+        select,
+        button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #1a73e8;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #155ab6;
         }
 
         table {
@@ -45,14 +66,32 @@
             text-align: center;
             background: #eef2f7;
         }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
+
         <h1>Florida LLC Filing Fee</h1>
         <p>Estimate the cost to file a Limited Liability Company (LLC) in Florida. Fees depend on state filing
             requirements.</p>
+
+        <h2>Estimate Your Fee</h2>
+
+        <label for="type">Business Size:</label>
+        <select id="type">
+            <option value="125">Small</option>
+            <option value="150">Medium</option>
+            <option value="180">Large</option>
+        </select>
+
+        <button onclick="calculateFee()">Calculate</button>
+        <div id="result"></div>
 
         <h2>Typical Fees</h2>
         <table>
@@ -77,6 +116,14 @@
         <p>Yes, failure to file annual report can result in penalties.</p>
 
         <div class="ad-slot">Advertisement Space</div>
+
+        <script>
+            function calculateFee() {
+                let fee = parseFloat(document.getElementById("type").value);
+                document.getElementById("result").innerHTML = "Estimated Total Fee: $" + fee.toFixed(2);
+            }
+        </script>
+
     </div>
 </body>
 
