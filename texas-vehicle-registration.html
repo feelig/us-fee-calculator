@@ -4,122 +4,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texas Vehicle Registration Fee</title>
-    <style>
-        body {
-            font-family: Arial;
-            background: #f4f6f8;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
+    <title>Texas Vehicle Registration Fee Calculator | Estimate Costs 2026</title>
+    <meta name="description"
+        content="Calculate your Texas vehicle registration and renewal fees online. Get a fast, free estimate for passenger cars, trucks, and commercial vehicles.">
 
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background: white;
-        }
+    <link rel="canonical" href="https://feelig.github.io/us-fee-calculator/texas-vehicle-registration.html">
 
-        h1,
-        h2 {
-            color: #1a73e8;
-        }
+    <meta property="og:title" content="Texas Vehicle Registration Fee Calculator">
+    <meta property="og:description" content="Quickly estimate your Texas vehicle registration and renewal costs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://feelig.github.io/us-fee-calculator/texas-vehicle-registration.html">
 
-        input,
-        select,
-        button {
-            padding: 10px;
-            width: 100%;
-            margin: 10px 0;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="css/style.css">
 
-        button {
-            background: #1a73e8;
-            color: white;
-            border: none;
-            cursor: pointer;
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Are vehicle registration fees in Texas paid annually?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Texas vehicle registration fees are typically paid on an annual basis. You will receive a renewal notice before your registration expires."
         }
-
-        button:hover {
-            background: #155ab6;
+      }, {
+        "@type": "Question",
+        "name": "Does vehicle weight affect registration fees in Texas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, heavier vehicles such as trucks and commercial vehicles often pay higher registration fees compared to standard passenger cars."
         }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
+      }, {
+        "@type": "Question",
+        "name": "Is auto insurance required to register a vehicle in Texas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you must provide proof of minimum liability insurance to legally register or renew a vehicle in the state of Texas."
         }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-
-        .ad-slot {
-            margin: 30px 0;
-            padding: 20px;
-            text-align: center;
-            background: #eef2f7;
-        }
-    </style>
+      }]
+    }
+    </script>
 </head>
 
 <body>
+
     <div class="container">
-        <h1>Texas Vehicle Registration Fee</h1>
-        <p>Estimate your vehicle registration fees in Texas. Fees depend on vehicle type, weight, and county. Use the
-            calculator below for a quick estimate.</p>
+        <nav style="margin-bottom: 20px; font-size: 14px;">
+            <a href="index.html" style="color: #1a73e8; text-decoration: none;">&larr; Back to Home</a>
+        </nav>
 
-        <h2>Estimate Your Fee</h2>
-        <label for="vehicle">Vehicle Type:</label>
-        <select id="vehicle">
-            <option value="50">Passenger Car</option>
-            <option value="100">Truck</option>
-            <option value="200">Commercial Vehicle</option>
-        </select>
-        <button onclick="calculateFee()">Calculate</button>
-        <div class="ad-slot">Advertisement Space</div>
-        <div id="result" style="margin-top:15px;font-weight:bold;"></div>
+        <h1>Texas Vehicle Registration Fee Calculator</h1>
+        <p>Estimate your vehicle registration and renewal fees in Texas. Fees are determined by the Texas Department of
+            Motor Vehicles (TxDMV) and depend heavily on vehicle type, weight, and your local county. Use the calculator
+            below for a quick estimation to help you prepare your budget.</p>
 
-        <h2>Typical Fees</h2>
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #e0e0e0; margin: 25px 0;">
+            <h2>Estimate Your Fee</h2>
+            <label for="vehicleType">Select Vehicle Type:</label>
+            <select id="vehicleType">
+                <option value="50.75">Passenger Car / Light Truck (Under 6,000 lbs) - $50.75</option>
+                <option value="54.00">Truck (6,001 - 10,000 lbs) - $54.00</option>
+                <option value="110.00">Heavy Vehicle / Commercial (Over 10,000 lbs) - Starting at $110.00</option>
+                <option value="15.00">Motorcycle or Moped - $15.00</option>
+            </select>
+
+            <button onclick="calculateVehicleFee()">Calculate Total</button>
+            <div id="result"></div>
+            <p style="font-size: 12px; color: #666; margin-top: 10px;">*Note: This estimate does not include local
+                county fees (up to $31.50) or inspection fees. This tool provides a baseline state fee estimation.</p>
+        </div>
+
+        <div class="ad-slot">
+            [ Advertisement Space ]
+        </div>
+
+        <h2>Standard Texas Registration Fees</h2>
         <table>
             <tr>
-                <th>Vehicle Type</th>
-                <th>Estimated Cost</th>
+                <th>Vehicle Classification</th>
+                <th>Base State Fee</th>
             </tr>
             <tr>
-                <td>Passenger Car</td>
-                <td>$50</td>
+                <td>Passenger Cars & Light Trucks</td>
+                <td>$50.75</td>
             </tr>
             <tr>
-                <td>Truck</td>
-                <td>$100</td>
+                <td>Vehicles (6,001 - 10,000 lbs)</td>
+                <td>$54.00</td>
             </tr>
             <tr>
-                <td>Commercial Vehicle</td>
-                <td>$200</td>
+                <td>Motorcycles / Mopeds</td>
+                <td>$15.00</td>
+            </tr>
+            <tr>
+                <td>Trailers (Under 6,000 lbs)</td>
+                <td>$45.00</td>
             </tr>
         </table>
 
-        <h2>FAQ</h2>
-        <h3>Are registration fees annual?</h3>
-        <p>Yes, fees are typically paid annually.</p>
-        <h3>Does weight affect fees?</h3>
-        <p>Yes, heavier vehicles often pay higher registration fees.</p>
-        <h3>Is insurance required?</h3>
-        <p>Yes, you must have liability insurance to register a vehicle in Texas.</p>
+        <div class="faq-section" style="margin-top: 40px;">
+            <h2>Frequently Asked Questions</h2>
 
-        <script>
-            function calculateFee() {
-                let fee = parseFloat(document.getElementById("vehicle").value);
-                document.getElementById("result").innerHTML = "Estimated Total Fee: $" + fee.toFixed(2);
-            }
-        </script>
+            <h3>Are vehicle registration fees in Texas paid annually?</h3>
+            <p>Yes, Texas vehicle registration fees are typically paid on an annual basis. You will receive a renewal
+                notice before your registration expires.</p>
+
+            <h3>Does vehicle weight affect registration fees in Texas?</h3>
+            <p>Yes, heavier vehicles such as trucks and commercial vehicles often pay higher registration fees compared
+                to standard passenger cars.</p>
+
+            <h3>Is auto insurance required to register a vehicle in Texas?</h3>
+            <p>Yes, you must provide proof of minimum liability insurance to legally register or renew a vehicle in the
+                state of Texas.</p>
+        </div>
+
     </div>
+
+    <script src="js/calculator.js"></script>
+
 </body>
 
 </html>

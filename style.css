@@ -1,0 +1,121 @@
+/* css/style.css */
+:root {
+    --primary-color: #1a73e8;
+    --hover-color: #155ab6;
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --border-color: #dadce0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 28px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+select,
+input,
+button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e8f0fe;
+    border-left: 4px solid var(--primary-color);
+    font-size: 18px;
+    font-weight: bold;
+    display: none;
+    /* 默认隐藏，计算后显示 */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f3f4;
+}
+
+.ad-slot {
+    margin: 30px 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #f1f3f4;
+    border: 1px dashed #bdc1c6;
+    color: #5f6368;
+}
+
+.faq-section h3 {
+    margin-bottom: 5px;
+}
+
+.faq-section p {
+    margin-top: 0;
+    color: #555;
+}
