@@ -4,130 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Florida Vehicle Registration Fee</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background: white;
-        }
-
-        h1,
-        h2 {
-            color: #1a73e8;
-        }
-
-        label,
-        select,
-        button {
-            display: block;
-            margin: 10px 0;
-            padding: 10px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        button {
-            background: #1a73e8;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #155ab6;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-
-        .ad-slot {
-            margin: 30px 0;
-            padding: 20px;
-            text-align: center;
-            background: #eef2f7;
-        }
-
-        #result {
-            margin-top: 15px;
-            font-weight: bold;
-        }
-    </style>
+    <title>Florida Vehicle Registration Fee Calculator</title>
+    <link rel="canonical" href="https://feelig.github.io/us-fee-calculator/florida-vehicle-registration.html">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="container">
-
-        <h1>Florida Vehicle Registration Fee</h1>
-        <p>Estimate vehicle registration fees in Florida. Fees vary by vehicle type and county.</p>
-
-        <h2>Estimate Your Fee</h2>
-
-        <label for="vehicle">Vehicle Type:</label>
-        <select id="vehicle">
-            <option value="50">Passenger Car</option>
-            <option value="100">Truck</option>
-            <option value="200">Commercial Vehicle</option>
-        </select>
-
-        <button onclick="calculateFee()">Calculate</button>
-        <div id="result"></div>
-
-        <h2>Typical Fees</h2>
-        <table>
-            <tr>
-                <th>Vehicle Type</th>
-                <th>Estimated Cost</th>
-            </tr>
-            <tr>
-                <td>Passenger Car</td>
-                <td>$50</td>
-            </tr>
-            <tr>
-                <td>Truck</td>
-                <td>$100</td>
-            </tr>
-            <tr>
-                <td>Commercial Vehicle</td>
-                <td>$200</td>
-            </tr>
-        </table>
-
-        <h2>FAQ</h2>
-        <h3>Are registration fees annual?</h3>
-        <p>Yes, Florida registration is annual.</p>
-        <h3>Does weight affect fees?</h3>
-        <p>Yes, heavier vehicles pay higher fees.</p>
-
+        <nav style="margin-bottom: 20px; font-size: 14px;">
+            <a href="index.html" style="color: #1a73e8; text-decoration: none;">&larr; Back to Home</a>
+        </nav>
+        <h1>Florida Vehicle Registration Fee Calculator</h1>
+        <p>Florida vehicle registration fees are primarily based on the weight of your vehicle. Note that first-time
+            registrations in Florida also require a $225 Initial Registration Fee.</p>
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #e0e0e0; margin: 25px 0;">
+            <h2>Estimate Your Annual Renewal Fee</h2>
+            <label for="flVehicleType">Select Vehicle Weight Class:</label>
+            <select id="flVehicleType">
+                <option value="27.60">Car/Truck Under 2,499 lbs - $27.60</option>
+                <option value="35.60">Car/Truck 2,500 to 3,499 lbs - $35.60</option>
+                <option value="45.60">Car/Truck 3,500 lbs and over - $45.60</option>
+            </select>
+            <button onclick="calculateFLVehicleFee()">Calculate Total</button>
+            <div id="result"></div>
+        </div>
         <div class="ad-slot">Advertisement Space</div>
-
-        <script>
-            function calculateFee() {
-                let fee = parseFloat(document.getElementById("vehicle").value);
-                document.getElementById("result").innerHTML = "Estimated Total Fee: $" + fee.toFixed(2);
-            }
-        </script>
-
+        <div class="faq-section" style="margin-top: 40px;">
+            <h2>FAQ</h2>
+            <h3>What is the Initial Registration Fee?</h3>
+            <p>If you are registering a vehicle in Florida for the very first time, the state charges a one-time $225
+                Initial Registration Fee on top of standard fees.</p>
+        </div>
     </div>
+    <script src="js/calculator.js"></script>
 </body>
 
 </html>

@@ -4,83 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texas Marriage License Cost</title>
-    <style>
-        body {
-            font-family: Arial;
-            background: #f4f6f8;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background: white;
-        }
-
-        h1,
-        h2 {
-            color: #1a73e8;
-        }
-
-        input,
-        select,
-        button {
-            padding: 10px;
-            width: 100%;
-            margin: 10px 0;
-            box-sizing: border-box;
-        }
-
-        button {
-            background: #1a73e8;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #155ab6;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-
-        .ad-slot {
-            margin: 30px 0;
-            padding: 20px;
-            text-align: center;
-            background: #eef2f7;
-        }
-    </style>
+    <title>Texas Marriage License Cost Calculator</title>
+    <meta name="description" content="Calculate the cost of getting a marriage license in Texas.">
+    <link rel="canonical" href="https://feelig.github.io/us-fee-calculator/texas-marriage-license.html">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Texas Marriage License Cost</h1>
-        <p>Estimate the cost of obtaining a marriage license in Texas. Fees vary slightly by county. This calculator
-            gives a general estimate.</p>
-
-        <h2>Estimate Your Fee</h2>
-        <label for="county">County Fee ($):</label>
-        <input type="number" id="county" placeholder="Enter county fee or leave blank for default $72">
-        <button onclick="calculateFee()">Calculate</button>
+        <nav style="margin-bottom: 20px; font-size: 14px;">
+            <a href="index.html" style="color: #1a73e8; text-decoration: none;">&larr; Back to Home</a>
+        </nav>
+        <h1>Texas Marriage License Cost Calculator</h1>
+        <p>Estimate the cost of obtaining a marriage license in Texas.</p>
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #e0e0e0; margin: 25px 0;">
+            <h2>Estimate Your Fee</h2>
+            <label for="countyFeeMarriage">Enter Your County's Fee ($):</label>
+            <input type="number" id="countyFeeMarriage" placeholder="Leave blank for state average ($72)">
+            <button onclick="calculateMarriageFee()">Calculate Total</button>
+            <div id="result"></div>
+        </div>
         <div class="ad-slot">Advertisement Space</div>
-        <div id="result" style="margin-top:15px;font-weight:bold;"></div>
-
         <h2>Typical Fees</h2>
         <table>
             <tr>
@@ -88,31 +32,21 @@
                 <th>Estimated Cost</th>
             </tr>
             <tr>
-                <td>Marriage License</td>
-                <td>$72</td>
+                <td>Standard Marriage License</td>
+                <td>$72 - $85</td>
             </tr>
             <tr>
-                <td>Late Fee / Optional Classes</td>
-                <td>$10–$30</td>
+                <td>With Premarital Course Certificate</td>
+                <td>$12 - $25</td>
             </tr>
         </table>
-
-        <h2>FAQ</h2>
-        <h3>Do I need ID to apply?</h3>
-        <p>Yes, both parties must provide valid identification.</p>
-        <h3>Are there waiting periods?</h3>
-        <p>Yes, a 72-hour waiting period applies in most cases.</p>
-        <h3>Can I get a waiver?</h3>
-        <p>Certain exemptions exist for military or hardship situations.</p>
-
-        <script>
-            function calculateFee() {
-                let fee = parseFloat(document.getElementById("county").value);
-                if (isNaN(fee)) fee = 72;
-                document.getElementById("result").innerHTML = "Estimated Total Cost: $" + fee.toFixed(2);
-            }
-        </script>
+        <div class="faq-section" style="margin-top: 40px;">
+            <h2>FAQ</h2>
+            <h3>Is there a waiting period?</h3>
+            <p>Yes, Texas law requires a 72-hour waiting period after the license is issued.</p>
+        </div>
     </div>
+    <script src="js/calculator.js"></script>
 </body>
 
 </html>

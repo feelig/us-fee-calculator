@@ -7,59 +7,50 @@
     <title>US Government Fee & License Cost Calculator</title>
     <meta name="description"
         content="Estimate business license fees, vehicle registration costs, marriage license fees, and other government expenses by state. Simple calculators and clear explanations.">
+    <link rel="canonical" href="https://feelig.github.io/us-fee-calculator/index.html">
+
+    <link rel="stylesheet" href="css/style.css">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f6f8;
-            color: #333;
+        /* 首页特有的一点排版优化 */
+        ul {
+            line-height: 1.8;
+            list-style-type: none;
+            padding-left: 0;
         }
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-            background: white;
+        ul li {
+            margin-bottom: 12px;
         }
 
-        h1,
-        h2 {
+        ul li a {
+            text-decoration: none;
             color: #1a73e8;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.2s;
         }
 
-        a {
-            color: #1a73e8;
+        ul li a:hover {
+            text-decoration: underline;
+            color: #155ab6;
+        }
+
+        .nav-links {
+            margin-bottom: 20px;
+            font-size: 14px;
+            border-bottom: 1px solid #dadce0;
+            padding-bottom: 12px;
+        }
+
+        .nav-links a {
+            margin-right: 15px;
+            color: #666;
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
-
-        ul {
-            line-height: 1.8;
-        }
-
-        .ad-slot {
-            margin: 30px 0;
-            padding: 20px;
-            text-align: center;
-            background: #eef2f7;
-        }
-
-        footer {
-            margin-top: 40px;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .nav {
-            margin-bottom: 20px;
-        }
-
-        .nav a {
-            margin-right: 15px;
+        .nav-links a:hover {
+            color: #1a73e8;
         }
     </style>
 </head>
@@ -68,7 +59,7 @@
 
     <div class="container">
 
-        <div class="nav">
+        <div class="nav-links">
             <a href="privacy-policy.html">Privacy Policy</a>
             <a href="disclaimer.html">Disclaimer</a>
             <a href="contact.html">Contact</a>
@@ -101,7 +92,7 @@
             <li><a href="texas-dba-registration.html">Texas DBA Registration Fee</a></li>
         </ul>
 
-        <h2>Florida Fee Calculators (Coming Soon)</h2>
+        <h2>Florida Fee Calculators</h2>
         <ul>
             <li><a href="florida-business-license.html">Florida Business License Fee</a></li>
             <li><a href="florida-llc-fee.html">Florida LLC Filing Fee</a></li>
@@ -110,14 +101,14 @@
             <li><a href="florida-dba-registration.html">Florida DBA Registration Fee</a></li>
         </ul>
 
-        <footer>
-            <p>
-                Disclaimer: This website provides general estimates only and does not constitute legal or professional
-                advice.
-            </p>
+        <footer
+            style="margin-top: 40px; font-size: 13px; color: #888; border-top: 1px solid #dadce0; padding-top: 20px;">
+            <p>Disclaimer: This website provides general estimates only and does not constitute legal or professional
+                advice.</p>
         </footer>
 
     </div>
+
 </body>
 
 </html>

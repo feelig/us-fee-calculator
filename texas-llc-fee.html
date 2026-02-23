@@ -4,121 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texas LLC Filing Fee</title>
-    <!-- 同样CSS -->
-    <style>
-        body {
-            font-family: Arial;
-            background: #f4f6f8;
-            margin: 0;
-            padding: 0;
-            color: #333
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background: white
-        }
-
-        h1,
-        h2 {
-            color: #1a73e8
-        }
-
-        input,
-        select,
-        button {
-            padding: 10px;
-            width: 100%;
-            margin: 10px 0;
-            box-sizing: border-box
-        }
-
-        button {
-            background: #1a73e8;
-            color: white;
-            border: none;
-            cursor: pointer
-        }
-
-        button:hover {
-            background: #155ab6
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px
-        }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left
-        }
-
-        .ad-slot {
-            margin: 30px 0;
-            padding: 20px;
-            text-align: center;
-            background: #eef2f7
-        }
-    </style>
+    <title>Texas LLC Filing Fee Calculator | Startup Costs 2026</title>
+    <meta name="description" content="Estimate your Texas LLC filing fees, franchise taxes, and annual report costs.">
+    <link rel="canonical" href="https://feelig.github.io/us-fee-calculator/texas-llc-fee.html">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Texas LLC Filing Fee</h1>
-        <p>Estimate filing fees for LLCs in Texas. Fees vary by type and revenue. Use the calculator for a quick
-            estimate.</p>
-
-        <label for="revenue">Estimated Annual Revenue ($):</label>
-        <input type="number" id="revenue" placeholder="Enter revenue">
-        <button onclick="calculateFee()">Calculate</button>
+        <nav style="margin-bottom: 20px; font-size: 14px;">
+            <a href="index.html" style="color: #1a73e8; text-decoration: none;">&larr; Back to Home</a>
+        </nav>
+        <h1>Texas LLC Filing Fee Calculator</h1>
+        <p>Use this tool to estimate your initial state filing costs for forming a Limited Liability Company (LLC) in
+            Texas.</p>
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #e0e0e0; margin: 25px 0;">
+            <h2>Estimate Your Formation Fee</h2>
+            <label for="llcType">Select Entity Type:</label>
+            <select id="llcType">
+                <option value="300.00">Standard Texas LLC (Domestic) - $300.00</option>
+                <option value="750.00">Foreign LLC (Out-of-State) - $750.00</option>
+                <option value="200.00">Professional LLC (PLLC) - $200.00</option>
+            </select>
+            <button onclick="calculateLLCFee()">Calculate Total</button>
+            <div id="result"></div>
+        </div>
         <div class="ad-slot">Advertisement Space</div>
-        <div id="result" style="margin-top:15px;font-weight:bold;"></div>
-
-        <h2>Typical Fees</h2>
+        <h2>Typical LLC Costs in Texas</h2>
         <table>
             <tr>
-                <th>Fee Type</th>
+                <th>Expense Type</th>
                 <th>Estimated Cost</th>
             </tr>
             <tr>
-                <td>LLC Filing Fee</td>
+                <td>Certificate of Formation</td>
                 <td>$300</td>
             </tr>
             <tr>
-                <td>Annual Report Fee</td>
-                <td>$50</td>
-            </tr>
-            <tr>
-                <td>Franchise Tax</td>
-                <td>Varies</td>
+                <td>Name Reservation (Optional)</td>
+                <td>$40</td>
             </tr>
         </table>
-
-        <h2>FAQ</h2>
-        <h3>Is LLC required in Texas?</h3>
-        <p>LLC is not required but provides liability protection.</p>
-        <h3>How often do I pay fees?</h3>
-        <p>Annual fees depend on state rules.</p>
-        <h3>Does revenue affect fees?</h3>
-        <p>Franchise tax may vary by revenue.</p>
-
-        <script>
-            function calculateFee() {
-                let base = 300;
-                let rev = parseFloat(document.getElementById("revenue").value);
-                if (isNaN(rev)) { document.getElementById("result").innerHTML = "Enter valid revenue"; return; }
-                let tax = rev > 1000000 ? rev * 0.00375 : 0;
-                document.getElementById("result").innerHTML = "Estimated Total Cost: $" + (base + tax).toFixed(2);
-            }
-        </script>
+        <div class="faq-section" style="margin-top: 40px;">
+            <h2>FAQ</h2>
+            <h3>How much does it cost to form an LLC in Texas?</h3>
+            <p>The standard state filing fee is $300, payable to the Texas Secretary of State.</p>
+        </div>
     </div>
+    <script src="js/calculator.js"></script>
 </body>
 
 </html>
